@@ -1,5 +1,8 @@
 package com.learn.entities;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Certificate {
 
 	private String course;
