@@ -22,6 +22,7 @@ public class MapDemo {
 		Answer ans1 = new Answer();
 		ans1.setAnswerId(343);
 		ans1.setAnswer("Java is a programming language.");
+		ans1.setQuestion(q1);
 		q1.setAnswer(ans1);
 		
 		//creating question
@@ -33,6 +34,7 @@ public class MapDemo {
 		Answer ans2 = new Answer();
 		ans2.setAnswerId(344);
 		ans2.setAnswer("API to work with objects in java.");
+		ans2.setQuestion(q2);
 		q2.setAnswer(ans2);
 		
 		Session s = factory.openSession();
@@ -42,6 +44,12 @@ public class MapDemo {
 		s.save(ans1);
 		s.save(ans2);
 		tx.commit();
+		
+		//fetching....
+		Question newQ = s.get(Question.class, 242);
+		System.out.println(newQ.getQuestion());
+		System.out.println(newQ.getAnswer().getAnswer());
+		
 		s.close();
 		factory.close();
 		
