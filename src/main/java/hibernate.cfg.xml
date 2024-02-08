@@ -12,7 +12,9 @@
 		<property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
-		<mapping class="com.learn.entities.Student"/>
-		<mapping class="com.learn.entities.Address"/>
+		<mapping class="com.learn.Student"/>
+		<mapping class="com.learn.Address"/>
+		<mapping class="com.learn.map.Question"/>
+		<mapping class="com.learn.map.Answer"/>
 	</session-factory>
 </hibernate-configuration>
