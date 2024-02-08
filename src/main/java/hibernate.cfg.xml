@@ -13,5 +13,6 @@
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
 		<mapping class="com.learn.entities.Student"/>
+		<mapping class="com.learn.entities.Address"/>
 	</session-factory>
 </hibernate-configuration>
