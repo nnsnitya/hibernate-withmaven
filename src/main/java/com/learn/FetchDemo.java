@@ -4,9 +4,8 @@ package com.learn;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import com.learn.entities.Address;
-import com.learn.entities.Student;
+import com.learn.Address;
+import com.learn.Student;
 
 public class FetchDemo {
 

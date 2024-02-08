@@ -1,17 +1,14 @@
 package com.learn;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Date;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
-import com.learn.entities.Address;
-import com.learn.entities.Student;
+import com.learn.Address;
+import com.learn.Student;
 
 /**
  * Hello world!

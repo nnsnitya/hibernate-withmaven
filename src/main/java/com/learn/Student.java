@@ -1,4 +1,4 @@
-package com.learn.entities;
+package com.learn;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
