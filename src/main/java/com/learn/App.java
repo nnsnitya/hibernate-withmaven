@@ -2,6 +2,7 @@ package com.learn;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.learn.entities.Student;
@@ -21,18 +22,18 @@ public class App
         
         //creating student
         Student st = new Student();
-        st.setId(102);
-        st.setName("Amit");
-        st.setCity("Chennai");
+        st.setId(101);
+        st.setName("Sumit");
+        st.setCity("Delhi");
         System.out.println(st);
         
         Session session = factory.openSession();
-        session.beginTransaction();
+        Transaction tx = session.beginTransaction();
         session.save(st);
-        session.getTransaction().commit();
+        tx.commit();
         session.close();
         
-//        System.out.println(factory);
+        System.out.println(factory);
         System.out.println(factory.isClosed());
     }
 }
