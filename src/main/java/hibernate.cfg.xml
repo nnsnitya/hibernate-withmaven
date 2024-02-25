@@ -16,5 +16,7 @@
 		<mapping class="com.learn.Address"/>
 		<mapping class="com.learn.map.onetomany.Question"/>
 		<mapping class="com.learn.map.onetomany.Answer"/>
+		<mapping class="com.learn.map.manytomany.Emp"/>
+		<mapping class="com.learn.map.manytomany.Project"/>
 	</session-factory>
 </hibernate-configuration>
