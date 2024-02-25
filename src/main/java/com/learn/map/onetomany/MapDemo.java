@@ -49,19 +49,21 @@ public class MapDemo {
 		Transaction tx = s.beginTransaction();
 		
 		//save
-		s.save(q1);
-		s.save(ans1);
-		s.save(ans2);
-		s.save(ans3);
+//		s.save(q1);
+//		s.save(ans1);
+//		s.save(ans2);
+//		s.save(ans3);
 		
+		//fetching....
+		Question q = s.get(Question.class, 122);
+		System.out.println(q.getQuestion());
+		for(Answer a: q.getAnswers()) {
+			System.out.println(a.getAnswer());
+		}
 		
 		
 		tx.commit();
 		
-		//fetching....
-//		Question newQ = s.get(Question.class, 242);
-//		System.out.println(newQ.getQuestion());
-//		System.out.println(newQ.getAnswer().getAnswer());
 		
 		s.close();
 		factory.close();
