@@ -43,8 +43,6 @@ public class MapDemo {
 		
 		q1.setAnswers(answers);
 		
-		//creating question
-		
 		Session s = factory.openSession();
 		Transaction tx = s.beginTransaction();
 		
@@ -55,11 +53,14 @@ public class MapDemo {
 //		s.save(ans3);
 		
 		//fetching....
-		Question q = s.get(Question.class, 122);
+		Question q = (Question)s.get(Question.class, 122);
+		System.out.println(q.getQuestionId());
 		System.out.println(q.getQuestion());
-		for(Answer a: q.getAnswers()) {
-			System.out.println(a.getAnswer());
-		}
+		//Lazy loading
+		System.out.println(q.getAnswers().size());
+//		for(Answer a: q.getAnswers()) {
+//			System.out.println(a.getAnswer());
+//		}
 		
 		
 		tx.commit();
