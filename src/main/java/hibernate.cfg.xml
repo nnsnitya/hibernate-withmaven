@@ -14,7 +14,7 @@
 		<property name="show_sql">true</property>
 		<mapping class="com.learn.Student"/>
 		<mapping class="com.learn.Address"/>
-		<mapping class="com.learn.map.Question"/>
-		<mapping class="com.learn.map.Answer"/>
+		<mapping class="com.learn.map.onetomany.Question"/>
+		<mapping class="com.learn.map.onetomany.Answer"/>
 	</session-factory>
 </hibernate-configuration>
